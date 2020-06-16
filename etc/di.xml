@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- 'cache_invalidate: %s'-->
+    <type name="Magento\Framework\Cache\InvalidateLogger">
+        <arguments>
+            <argument name="logger" xsi:type="object">Psr\Log\NullLogger</argument>
+        </arguments>
+    </type>
+
+    <!-- 'Add of item with id %s was processed %s' -->
+    <!-- 'Remove on item with id %s was processed %s' -->
+    <type name="Magento\Backend\Model\Menu">
+        <arguments>
+            <argument name="logger" xsi:type="object">Psr\Log\NullLogger</argument>
+        </arguments>
+    </type>
+
+    <!-- 'Broken reference: missing declaration of the element '{$key}' -->
+    <!-- "Broken reference: the '{$name}' element cannot be added as child to '{$parentName}', " -->
+    <type name="Magento\Framework\View\Layout\ScheduledStructure\Helper">
+        <arguments>
+            <argument name="logger" xsi:type="object">Psr\Log\NullLogger</argument>
+        </arguments>
+    </type>
+
+    <!--  "Broken reference: the '{$childName}' tries to reorder itself towards '{$sibling}', but " .
+          "their parents are different: '{$parentName}' and '{$siblingParentName}' respectively." -->
+    <type name="Magento\Framework\View\Layout\Data\Structure">
+        <arguments>
+            <argument name="logger" xsi:type="object">Psr\Log\NullLogger</argument>
+        </arguments>
+    </type>
+
+</config>

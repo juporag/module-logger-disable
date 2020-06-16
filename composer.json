@@ -1,0 +1,22 @@
+{
+    "name": "jpa/module-logger-disabled",
+    "description": "This module hides non-significant messages",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Julio Porter",
+            "email": "juporag@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Jpa\\LoggerDisabled\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
